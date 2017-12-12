@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!--http://localhost:8080/index-->
+    <package name="hellodemo" namespace="/" extends="struts-default">
+        <action name="index" class="helloAction" method="index">
+            <result name="index">/WEB-INF/jsp/index.jsp</result>
+        </action>
+        <action name="reg" class="helloAction" method="reg">
+            <result name="reg">/WEB-INF/jsp/reg.jsp</result>
+        </action>
+        <action name="doReg" class="helloAction" method="doReg">
+            <result name="login" >/WEB-INF/jsp/login.jsp</result>
+        </action>
+        <action name="login" method="doLogin" class="helloAction">
+            <result name="index">/WEB-INF/jsp/index.jsp</result>
+            <result name="login">/WEB-INF/jsp/login.jsp</result>
+
+        </action>
+    </package>
+</struts>
